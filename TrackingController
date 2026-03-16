@@ -1,0 +1,23 @@
+using System.Web.Mvc;
+
+namespace DestinaApi.Controllers
+{
+    public class TrackController : Controller
+    {
+        // /Track/Driver?o=RSV000164&c=TOKEN
+        public ActionResult Driver(string o, string c)
+        {
+            ViewBag.OrderId = o;
+            ViewBag.Code = c;
+            return View();
+        }
+
+        // /Track/Viewer?o=RSV000164&c=TOKEN
+        public ActionResult Viewer(string o, string c)
+        {
+            ViewBag.OrderId = o;
+            ViewBag.Code = c;
+            return View();
+        }
+    }
+}
